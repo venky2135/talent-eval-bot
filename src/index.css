@@ -2,41 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Crisp Interview Assistant Design System */
 
 @layer base {
   :root {
+    /* Core Colors */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 215 25% 15%;
 
+    /* Brand Colors */
+    --primary: 214 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 214 100% 88%;
+    --primary-dark: 214 100% 35%;
+
+    /* Interface Colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 15%;
+    
+    --secondary: 214 13% 93%;
+    --secondary-foreground: 215 25% 15%;
+    
+    --muted: 214 13% 96%;
+    --muted-foreground: 215 10% 55%;
+    
+    --accent: 214 100% 96%;
+    --accent-foreground: 214 100% 35%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Status Colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 92%;
+    
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 95%;
+    
+    --danger: 0 84% 60%;
+    --danger-foreground: 0 0% 100%;
+    --danger-light: 0 84% 96%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Question Difficulty Colors */
+    --easy: 142 76% 36%;
+    --easy-foreground: 0 0% 100%;
+    --easy-light: 142 76% 92%;
+    
+    --medium: 38 92% 50%;
+    --medium-foreground: 0 0% 100%;
+    --medium-light: 38 92% 95%;
+    
+    --hard: 0 84% 60%;
+    --hard-foreground: 0 0% 100%;
+    --hard-light: 0 84% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* UI Elements */
+    --border: 214 13% 91%;
+    --input: 214 13% 91%;
+    --ring: 214 100% 50%;
+    
+    /* Chat Colors */
+    --chat-user: 214 100% 50%;
+    --chat-user-foreground: 0 0% 100%;
+    --chat-ai: 214 13% 96%;
+    --chat-ai-foreground: 215 25% 15%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(214 100% 50%), hsl(214 100% 35%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 30%));
+    --gradient-warning: linear-gradient(135deg, hsl(38 92% 50%), hsl(38 92% 45%));
+    --gradient-danger: linear-gradient(135deg, hsl(0 84% 60%), hsl(0 84% 50%));
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(214 13% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(214 13% 15% / 0.1), 0 2px 4px -1px hsl(214 13% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(214 13% 15% / 0.1), 0 4px 6px -2px hsl(214 13% 15% / 0.05);
+    --shadow-glow: 0 0 0 1px hsl(214 100% 50% / 0.3), 0 4px 12px hsl(214 100% 50% / 0.15);
 
     --radius: 0.5rem;
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
